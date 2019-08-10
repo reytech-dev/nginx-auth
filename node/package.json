@@ -1,0 +1,17 @@
+{
+  "name": "auth-server",
+  "version": "1.0.0",
+  "description": "Contains poc auth server with express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "/data/node_modules/.bin/nodemon --watch /data/bin/ /data/bin/index.js"
+  },
+  "author": "Philipp Reinert",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}

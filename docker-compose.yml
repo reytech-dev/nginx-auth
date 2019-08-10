@@ -1,0 +1,17 @@
+version: "3"
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/conf/docker-location.conf:/etc/nginx/conf.d/docker-location.conf
+      - ./nginx/public:/usr/share/public
+      - ./nginx/private:/usr/share/private
+    ports:
+      - 80:80
+  auth-server:
+    image: node:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./node:/data
+    command: bash -c "cd /data && npm install && npm run serve"

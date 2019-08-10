@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Private File</title>
+  </head>
+  <body>
+    <h1>PRIVATE</h1>
+    <a href="/public/" onclick="return deleteCookie()">Logout</a>
+    <script type="application/javascript">
+      function deleteCookie() {
+        document.cookie =
+          "isLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        return true;
+      }
+    </script>
+  </body>
+</html>
